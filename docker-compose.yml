@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  subnetly:
+    build: .
+    container_name: subnetly
+    ports:
+      - "8085:80"
+    restart: unless-stopped
+    # Modo desarrollo sin rebuild (edita y refresca el navegador):
+    # image: nginx:alpine
+    # volumes:
+    #   - ./index.html:/usr/share/nginx/html/index.html:ro
+    #   - ./app.js:/usr/share/nginx/html/app.js:ro
+    #   - ./assets:/usr/share/nginx/html/assets:ro
